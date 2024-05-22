@@ -190,7 +190,7 @@
 
           # Add any shell logic you want executed any time the environment is activated
           shellHook = ''
-            export PATH=$PATH:/nix/store/02hzx0lagp1fwbkwf4f229jfgdp48f9v-wasmcloud-1.0.0/bin/
+            export PATH=$PATH:/nix/store/3l74hcgd2x9ialxj1fb0yy8afkcqwi4z-wash-aarch64-unknown-linux-musl
           '';
         };
       });
