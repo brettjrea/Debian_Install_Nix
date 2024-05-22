@@ -80,31 +80,31 @@ sudo cp nats-server/nats-server-v2.10.14-linux-arm64/nats-server /usr/bin
 ### wasmCloud Binary
 
 ```
-nix store prefetch-file https://github.com/wasmCloud/wasmCloud/releases/download/wash-cli-v0.27.0/wash-aarch64-unknown-linux-musl
+nix store prefetch-file https://github.com/wasmCloud/wasmCloud/releases/download/wash-cli-v0.28.1/wash-aarch64-unknown-linux-musl
 ```
 
 ```
-/nix/store/xk3nrbk3f73afb2g4p28pnfr495hc370-wash-aarch64-unknown-linux-musl
+/nix/store/3l74hcgd2x9ialxj1fb0yy8afkcqwi4z-wash-aarch64-unknown-linux-musl
 ```
 
 ```
-chmod +x /nix/store/xk3nrbk3f73afb2g4p28pnfr495hc370-wash-aarch64-unknown-linux-musl
+chmod +x /nix/store/3l74hcgd2x9ialxj1fb0yy8afkcqwi4z-wash-aarch64-unknown-linux-musl
 ```
 
 *I am using the full path for now which is good because it shows the unique hash and how versioning and reproducibility work.*
 
 ```
-/nix/store/xk3nrbk3f73afb2g4p28pnfr495hc370-wash-aarch64-unknown-linux-musl up
+/nix/store/3l74hcgd2x9ialxj1fb0yy8afkcqwi4z-wash-aarch64-unknown-linux-musl up
 ```
 
 ### Another way to test if binary works outside of the Nix store for sanity checks.
 
 ```
-sudo chown 755 /nix/store/xk3nrbk3f73afb2g4p28pnfr495hc370-wash-aarch64-unknown-linux-musl
+sudo chown 755 /nix/store/3l74hcgd2x9ialxj1fb0yy8afkcqwi4z-wash-aarch64-unknown-linux-musl
 ```
 
 ```
-cp /nix/store/xk3nrbk3f73afb2g4p28pnfr495hc370-wash-aarch64-unknown-linux-musl ~/wash
+cp /nix/store/3l74hcgd2x9ialxj1fb0yy8afkcqwi4z-wash-aarch64-unknown-linux-musl ~/wash
 ```
 
 ```
@@ -117,7 +117,7 @@ chmod 755 ~/wash
 
 ### Create Rust Project
 ```
-/nix/store/xk3nrbk3f73afb2g4p28pnfr495hc370-wash-aarch64-unknown-linux-musl new component hello --template-name hello-world-rust
+/nix/store/3l74hcgd2x9ialxj1fb0yy8afkcqwi4z-wash-aarch64-unknown-linux-musl new component hello --template-name hello-world-rust
 ```
 
 ```
@@ -125,11 +125,11 @@ cd hello
 ```
 
 ```
-/nix/store/xk3nrbk3f73afb2g4p28pnfr495hc370-wash-aarch64-unknown-linux-musl app deploy wadm.yaml
+/nix/store/3l74hcgd2x9ialxj1fb0yy8afkcqwi4z-wash-aarch64-unknown-linux-musl app deploy wadm.yaml
 ```
 
 ```
-/nix/store/xk3nrbk3f73afb2g4p28pnfr495hc370-wash-aarch64-unknown-linux-musl app list
+/nix/store/3l74hcgd2x9ialxj1fb0yy8afkcqwi4z-wash-aarch64-unknown-linux-musl app list
 ```
 
 ### Test project
