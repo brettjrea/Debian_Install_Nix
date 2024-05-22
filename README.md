@@ -63,3 +63,27 @@ $ rm -rf /nix ~/.nix-channels ~/.nix-defexpr ~/.nix-profile
 You might also want to manually remove references to Nix from your `~/.profile`.
 
 ---
+
+
+### wasmCloud Binary
+
+```
+nix store prefetch-file https://github.com/wasmCloud/wasmCloud/releases/download/wash-cli-v0.28.1/wash-aarch64-unknown-linux-musl
+```
+
+```
+/nix/store/3l74hcgd2x9ialxj1fb0yy8afkcqwi4z-wash-aarch64-unknown-linux-musl
+```
+
+```
+chmod +x /nix/store/3l74hcgd2x9ialxj1fb0yy8afkcqwi4z-wash-aarch64-unknown-linux-musl
+```
+
+*I am using the full path for now which is good because it shows the unique hash and how versioning and reproducibility work.*
+
+```
+/nix/store/3l74hcgd2x9ialxj1fb0yy8afkcqwi4z-wash-aarch64-unknown-linux-musl up
+```
+
+---
+
